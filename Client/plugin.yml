@@ -1,0 +1,22 @@
+name: OnlineWorld-Client
+description: A plugin that connects your server to worlds from OnlineWorld servers
+main: SOFe\OnlineWorld\Client\Main
+version: 0.1.0
+api: [3.0.0-ALPHA11]
+author: SOFe
+
+commands:
+  ow:
+    description: OnlineWorld management command
+    permission: onlineworld.client.command
+
+permissions:
+  onlineworld.client:
+    description: OnlineWorld-Client permission
+    children:
+      onlineworld.client.command:
+        description: Permission to see the /ow command
+      onlineworld.client.create:
+        description: Permission to create or modify an OnlineWorld world
+      onlineworld.client.view:
+        description: Permission to view the details of an OnlineWorld world (excluding the password)
